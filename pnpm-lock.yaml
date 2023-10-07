@@ -76,6 +76,9 @@ devDependencies:
   typescript:
     specifier: ~5.1.3
     version: 5.1.6
+  webpack-manifest-plugin:
+    specifier: ^5.0.0
+    version: 5.0.0(webpack@5.88.2)
 
 packages:
 
@@ -6436,6 +6439,10 @@ packages:
       smart-buffer: 4.2.0
     dev: true
 
+  /source-list-map@2.0.1:
+    resolution: {integrity: sha512-qnQ7gVMxGNxsiL4lEuJwe/To8UnK7fAnmbGEEH8RpLouuKbeEm0lhbQVFIrNSuB+G7tVrAlVsZgETT5nljf+Iw==}
+    dev: true
+
   /source-map-js@1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
@@ -7158,12 +7165,31 @@ packages:
       - utf-8-validate
     dev: true
 
+  /webpack-manifest-plugin@5.0.0(webpack@5.88.2):
+    resolution: {integrity: sha512-8RQfMAdc5Uw3QbCQ/CBV/AXqOR8mt03B6GJmRbhWopE8GzRfEpn+k0ZuWywxW+5QZsffhmFDY1J6ohqJo+eMuw==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      webpack: ^5.47.0
+    dependencies:
+      tapable: 2.2.1
+      webpack: 5.88.2
+      webpack-sources: 2.3.1
+    dev: true
+
   /webpack-merge@5.9.0:
     resolution: {integrity: sha512-6NbRQw4+Sy50vYNTw7EyOn41OZItPiXB8GNv3INSoe3PSFaHJEz3SHTrYVaRm2LilNGnFUzh0FAwqPEmU/CwDg==}
     engines: {node: '>=10.0.0'}
     dependencies:
       clone-deep: 4.0.1
       wildcard: 2.0.1
+    dev: true
+
+  /webpack-sources@2.3.1:
+    resolution: {integrity: sha512-y9EI9AO42JjEcrTJFOYmVywVZdKVUfOvDUPsJea5GIr1JOEGFVqwlY2K098fFoIjOkDzHn2AjRvM8dsBZu+gCA==}
+    engines: {node: '>=10.13.0'}
+    dependencies:
+      source-list-map: 2.0.1
+      source-map: 0.6.1
     dev: true
 
   /webpack-sources@3.2.3:
