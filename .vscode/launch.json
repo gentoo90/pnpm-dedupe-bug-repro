@@ -3,18 +3,28 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "ng serve",
-      "type": "chrome",
+      "type": "node",
       "request": "launch",
-      "preLaunchTask": "npm: start",
-      "url": "http://localhost:4200/"
+      "console": "internalConsole",
+      "name": "ng build",
+      "skipFiles": [ "<node_internals>/**" ],
+      "program": "${workspaceFolder}/node_modules/@angular/cli/bin/ng.js",
+      "env": {
+        "NODE_PATH": "${workspaceFolder}/node_modules/.pnpm/node_modules"
+      },
+      "args": [ "build", "--configuration=development" ]
     },
     {
-      "name": "ng test",
-      "type": "chrome",
+      "type": "node",
       "request": "launch",
-      "preLaunchTask": "npm: test",
-      "url": "http://localhost:9876/debug.html"
+      "console": "internalConsole",
+      "name": "ng serve",
+      "skipFiles": [ "<node_internals>/**" ],
+      "program": "${workspaceFolder}/node_modules/@angular/cli/bin/ng.js",
+      "env": {
+        "NODE_PATH": "${workspaceFolder}/node_modules/.pnpm/node_modules"
+      },
+      "args": [ "serve" ]
     }
   ]
 }
